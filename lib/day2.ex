@@ -33,11 +33,4 @@ defmodule Day2 do
   end
 
   def position(_, _, _, _), do: "Invalid instruction encountered"
-
-  def parse_input do
-    {:ok, file} = File.read("input.txt")
-
-    file
-    |> String.split("\n")
-  end
 end

@@ -7,9 +7,11 @@ defmodule Day1Test do
              7
   end
 
+  @tag :skip
   test "solution" do
     assert :solution ==
-             Day1.parse_input()
+             "day_1_input.txt"
+             |> Day1.parse_input()
              |> Day1.three_measurement_window_sums()
              |> Day1.depth_measurement_increases()
   end

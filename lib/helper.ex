@@ -1,8 +1,4 @@
-defmodule Day3 do
-  @moduledoc """
-  Documentation for `Day3`.
-  """
-
+defmodule Helper do
   @doc """
   Reads the puzzle input from a given text file path.
 

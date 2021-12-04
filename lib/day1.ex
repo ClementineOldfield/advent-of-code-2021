@@ -29,15 +29,9 @@ defmodule Day1 do
     three_measurement_window_sums([n2, n3 | rest], [n1 + n2 + n3 | result])
   end
 
-  def parse_input do
-    {:ok, file} = File.read("input.txt")
-
-    file
-    |> String.split("\n")
-    |> Enum.map(fn string ->
-      {integer, _} = Integer.parse(string)
-
-      integer
-    end)
+  def parse_input(path) do
+    path
+    |> Helper.parse_input()
+    |> Enum.map(&String.to_integer/1)
   end
 end

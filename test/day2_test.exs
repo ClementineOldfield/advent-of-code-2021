@@ -17,7 +17,8 @@ defmodule Day2Test do
     assert %{horizontal: 15, depth: 60} = Day2.position(test_instructions())
   end
 
+  @tag :skip
   test "solution" do
-    assert :solution = Day2.position(Day2.parse_input())
+    assert :solution = Day2.position(Helper.parse_input("day_2_input.txt"))
   end
 end
