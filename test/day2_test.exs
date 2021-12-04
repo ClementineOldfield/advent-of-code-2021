@@ -18,8 +18,6 @@ defmodule Day2Test do
   end
 
   test "solution" do
-    assert %{depth: depth, horizontal: horizontal} = Day2.position(Day2.parse_input())
-
-    IO.inspect(depth * horizontal)
+    assert :solution = Day2.position(Day2.parse_input())
   end
 end
