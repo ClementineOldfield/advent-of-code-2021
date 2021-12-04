@@ -4,14 +4,23 @@ defmodule Helper do
 
   ## Examples
 
-      iex> Day3.parse_input("test_input.txt")
+      iex> Helper.parse_input("test_input.txt")
       ["foo", "bar", "baz"]
 
   """
-  def parse_input(path) do
+  def parse_input(path, format \\ :string)
+
+  def parse_input(path, :string) do
     {:ok, file} = File.read(path)
 
     file
     |> String.split("\n")
   end
+
+  def parse_input(path, :integer) do
+    parse_input(path, :string)
+    |> Enum.map(&String.to_integer/1)
+  end
+
+  def parse_input(_path, format), do: {:error, "unknown format: #{format}"}
 end

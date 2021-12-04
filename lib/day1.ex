@@ -28,10 +28,4 @@ defmodule Day1 do
   def three_measurement_window_sums([n1, n2, n3 | rest], result) do
     three_measurement_window_sums([n2, n3 | rest], [n1 + n2 + n3 | result])
   end
-
-  def parse_input(path) do
-    path
-    |> Helper.parse_input()
-    |> Enum.map(&String.to_integer/1)
-  end
 end

@@ -4,18 +4,15 @@ defmodule Day3 do
   """
 
   @doc """
-  Reads the puzzle input from a given text file path.
+  returns the power consumption
 
   ## Examples
 
-      iex> Day3.parse_input("test_input.txt")
-      ["foo", "bar", "baz"]
+      iex> Day3.power_consumption(["00100", "11110", "10110", "10111", "10101", "01111", "00111", "11100", "10000", "11001", "00010", "01010"])
+      22
 
   """
-  def parse_input(path) do
-    {:ok, file} = File.read(path)
-
-    file
-    |> String.split("\n")
+  def power_consumption(input) do
+    23
   end
 end

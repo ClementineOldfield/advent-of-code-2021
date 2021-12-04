@@ -11,7 +11,7 @@ defmodule Day1Test do
   test "solution" do
     assert :solution ==
              "day_1_input.txt"
-             |> Day1.parse_input()
+             |> Helper.parse_input(:integer)
              |> Day1.three_measurement_window_sums()
              |> Day1.depth_measurement_increases()
   end
